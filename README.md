@@ -1,5 +1,5 @@
 # NXP-FMUMRT, MR-FMURT6, MR-VMU-RT117x
-This is an open reference design for a PX4 V5X flight controller. 
+This is an open reference design for a Pixhawk V5X (i.MX RT1062) / V6X (i.MX RT117x) flight controller. 
 
 Note1: For MR-FMURT6 based on NXP i.MX RT1062: This design is NOT being produced in volume, and we will produce MR-VMU-RT1176 using i.MX RT1176 MCU instead.
 The RT1176 offers higher processing speed (Ghz) and additional UARTS as well as a dual core processor.
