@@ -50,6 +50,10 @@ And the **Pixhawk Debug Adapter** - https://holybro.com/collections/flight-contr
 10) connect Pixhawk v6X-RT via USB to flash the PX4 FW image
 
 ## Precompiled PX4 FW images
+
+### 20231111 - based on [f2227e8](https://github.com/PX4/PX4-Autopilot/commit/076cf41cff5bca695950768ccb3597df22703e11)
+* [px4_fmu-v6xrt_20231111.zip](px4_fmu-v6xrt_20231111.zip) - contains both bootloader and default FW. Please update both!
+
 ### 20231101 - based on [d745fe2](https://github.com/PX4/PX4-Autopilot/commit/d745fe25d05a89b94a56b63d69e54e10577bcb92)
 * [px4_fmu-v6xrt_default_20231101.zip](px4_fmu-v6xrt_default_20231101.zip)
 * [px4_fmu-v6xrt_bootloader_20231101.zip](px4_fmu-v6xrt_bootloader_20231101.zip)
