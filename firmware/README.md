@@ -20,7 +20,6 @@ See message from David Sidrane - https://github.com/PX4/PX4-Autopilot/pull/22263
 ## flashing the code
 ### with QGC
 For flashing code with QGC a daily build of QGC needs to be used - https://docs.qgroundcontrol.com/master/en/releases/daily_builds.html
-**WARNING** enablement of px4_fmu-v6xrt is still pending (as of 20231031).
 
 ### with SEGGER debug probe
 For this a **SEGGER debug probe** HW is needed - https://www.segger.com/products/debug-trace-probes/
@@ -52,7 +51,7 @@ And the **Pixhawk Debug Adapter** - https://holybro.com/collections/flight-contr
 ## Precompiled PX4 FW images
 
 ### 20231111 - based on [f2227e8](https://github.com/PX4/PX4-Autopilot/commit/076cf41cff5bca695950768ccb3597df22703e11)
-* [px4_fmu-v6xrt_20231111.zip](px4_fmu-v6xrt_20231111.zip) - contains both bootloader and default FW. Please update both!
+* [px4_fmu-v6xrt_f2227e8.zip](px4_fmu-v6xrt_f2227e8.zip) - contains both bootloader and default FW. Please update both!
 
 ### 20231101 - based on [d745fe2](https://github.com/PX4/PX4-Autopilot/commit/d745fe25d05a89b94a56b63d69e54e10577bcb92)
 * [px4_fmu-v6xrt_default_20231101.zip](px4_fmu-v6xrt_default_20231101.zip)
