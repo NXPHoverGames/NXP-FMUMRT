@@ -52,7 +52,7 @@ And the **Pixhawk Debug Adapter** - https://holybro.com/collections/flight-contr
 ## Precompiled PX4 FW images
 
 ### 20231114 - based on [84766c4](https://github.com/PX4/PX4-Autopilot/commit/84766c4cb89ebdabfa7f2230e88a272f4c677ce3)
-* [px4_fmu-v6xrt_default_20231114.zip](px4_fmu-v6xrt_default_20231114.zip) - contains both bootloader and default FW. Please update
+* [px4_fmu-v6xrt_default_20231114.zip](px4_fmu-v6xrt_default_20231114.zip)
   
 ### 20231111 - based on [f2227e8](https://github.com/PX4/PX4-Autopilot/commit/076cf41cff5bca695950768ccb3597df22703e11)
 * [px4_fmu-v6xrt_f2227e8.zip](px4_fmu-v6xrt_f2227e8.zip) - contains both bootloader and default FW. Please update both!
