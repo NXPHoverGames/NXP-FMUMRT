@@ -21,34 +21,39 @@ See message from David Sidrane - https://github.com/PX4/PX4-Autopilot/pull/22263
 ### with QGC
 For flashing code with QGC a daily build of QGC needs to be used - https://docs.qgroundcontrol.com/master/en/releases/daily_builds.html
 
-### with SEGGER debug probe
-For this a **SEGGER debug probe** HW is needed - https://www.segger.com/products/debug-trace-probes/
-As well as the **SEGGER J-Link** SW - https://www.segger.com/downloads/jlink/
-And the **Pixhawk Debug Adapter** - https://holybro.com/collections/flight-controller-accessories/products/pixhawk-debug-adapter
-
-1) Connect the holybro pixhawk debug adapter, with SEGGER debug probe connected, to Pixhawk 6X-RT
-2) Power the Pixhawk 6X-RT either via USB or POWERx connector.
-3) Launch JlinkExe
-4) Type connect
-5) Select SWD and target is MIMXRT1176XXXA_M7
-6) type reset and halt
-7) Type loadbin /path/to/firmware/px4_fmu-v6xrt_bootloader.bin 0x30000000              # needed only in case of bootloader to be flashed
-8) Type loadbin /path/to/firmware/px4_fmu-v6xrt_default.bin 0x30020000
-9) type reset and go
-
 ### with PX4 developer toolchain based on own compiled code
 1) Install PX4 developer toolchain according https://docs.px4.io/main/en/dev_setup/dev_env.html
 2) Download PX4 Autopilot sourcecode - https://docs.px4.io/main/en/dev_setup/building_px4.html#download-the-px4-source-code
 3) Move into PX4-Autopilot code directory
 4) do **git checkout pr-px4_fmu-v6xrt**
 5) do **git pull --recurse-submodules**
-6) do **find boards/px4/fmu-v6xrt/nuttx-config/nsh -type f -iname "*defconfig*" -print0 | xargs -0 sed -i '/CONFIG_DEBUG_ASSERTIONS/s/y/n/g'** to switch off ASSERTION
-7) do **make px4_fmu-v6xrt_bootloader upload** to build the bootloader image and flash via USB **IF needed**
-8) connect Pixhawk v6X-RT via USB to flash the bootloader image and disconnect again when done
-9) do **make px4_fmu-v6xrt_default upload** to build the PX4 FW image and flash via USB
-10) connect Pixhawk v6X-RT via USB to flash the PX4 FW image
+6) do **make px4_fmu-v6xrt_default upload** to build the PX4 FW image and flash via USB
+7) connect Pixhawk v6X-RT via USB to flash the PX4 FW image
+
+### updating the bootloader
+For this a **SEGGER debug probe** HW is needed - https://www.segger.com/products/debug-trace-probes/
+As well as the **SEGGER J-Link** SW - https://www.segger.com/downloads/jlink/
+And the **Pixhawk Debug Adapter** - https://holybro.com/collections/flight-controller-accessories/products/pixhawk-debug-adapter
+
+1) Move into PX4-Autopilot code directory with checked out pr-px4_fmu-v6xrt (see instruction above)
+2)
+3) do **git pull --recurse-submodules**
+4) do **make distclean**
+5) do **make px4_fmu-v6xrt_default** to build the PX4 FW image and flash via USB
+6) Connect the holybro pixhawk debug adapter, with SEGGER debug probe connected, to Pixhawk 6X-RT
+7) Power the Pixhawk 6X-RT either via USB or POWERx connector.
+8) Launch JlinkExe
+9) Type connect
+10) Select SWD and target is MIMXRT1176XXXA_M7
+11) type reset and halt
+12) Type loadbin /path/to/firmware/px4_fmu-v6xrt_bootloader.bin 0x30000000              # needed only in case of bootloader to be flashed
+13) Type loadbin /path/to/firmware/px4_fmu-v6xrt_default.bin 0x30020000
+14) type reset and go
 
 ## Precompiled PX4 FW images
 
+### 20231114 - based on [84766c4](https://github.com/PX4/PX4-Autopilot/commit/84766c4cb89ebdabfa7f2230e88a272f4c677ce3)
+* [px4_fmu-v6xrt_default_20231114.zip](px4_fmu-v6xrt_default_20231114.zip) - contains both bootloader and default FW. Please update
+  
 ### 20231111 - based on [f2227e8](https://github.com/PX4/PX4-Autopilot/commit/076cf41cff5bca695950768ccb3597df22703e11)
 * [px4_fmu-v6xrt_f2227e8.zip](px4_fmu-v6xrt_f2227e8.zip) - contains both bootloader and default FW. Please update both!
