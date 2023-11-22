@@ -5,8 +5,8 @@
 Hardware desccription on Manufacturers webpage - https://holybro.com/products/fmuv6x-rt-developer-edition
 Documentation on PX4.io - https://docs.px4.io/main/en/flight_controller/pixhawk6x-rt.html
 
-**IMPORTANT** if you are using the v6xrt FMUM on a development baseboard from NXP and like to use the T1 ethernet:
-Please make sure that you enable the T1 ethernet PHY - **TJA1103** - via **make px4_fmu-v6xrt menuconfig**
+**IMPORTANT** if you are using the v6xrt FMUM on a development baseboard from NXP and like to use the T1 ethernet: 
+Please make sure that you enable the T1 ethernet PHY - **TJA1103** - via **make px4_fmu-v6xrt menuconfig**. 
 Ethernet PHY is in **Device Drivers** --> **Network Device/PHY Support** --> **Board PHY Selection (ETH0)** 
 
 ## Firmware sources
