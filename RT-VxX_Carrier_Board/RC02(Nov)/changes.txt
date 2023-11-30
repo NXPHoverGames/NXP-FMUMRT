@@ -1,0 +1,6 @@
+11/30/2023 iafg
+
+-	Resistor values changed which give the id of the board
+-	Corrected the reverse pinning on the DSM connector
+-	Physically Moved the NFC cable connector that was blocking the SDCARD
+- Re-Connected “loose” signals for the GPS arming and led. (the nets got accidentally disconnected when the IO processor was removed)
