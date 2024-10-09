@@ -18,7 +18,7 @@ Please report all issues found via https://github.com/PX4/PX4-Autopilot/issues/n
 
 ## flashing the code
 ### with QGC
-For flashing code with QGC a daily build of QGC needs to be used - https://docs.qgroundcontrol.com/master/en/releases/daily_builds.html
+For flashing code with QGC stable release version v4.4.0 or later is needed  - https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
 
 ### with PX4 developer toolchain based on own compiled code
 1) Install PX4 developer toolchain according https://docs.px4.io/main/en/dev_setup/dev_env.html
